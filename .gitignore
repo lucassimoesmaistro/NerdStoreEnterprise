@@ -3,3 +3,19 @@
 ################################################################################
 
 /.vs/NerdStoreEnterprise/v16
+/src/building-blocks/NSE.Core/bin/Debug/netcoreapp3.1
+/src/building-blocks/NSE.Core/obj
+/src/services/NSE.Carrinho.Api/bin/Debug/netcoreapp3.1
+/src/services/NSE.Carrinho.Api/obj
+/src/services/NSE.Catalogo.Api/bin/Debug/netcoreapp3.1
+/src/services/NSE.Catalogo.Api/obj
+/src/services/NSE.Cliente.Api/bin/Debug/netcoreapp3.1
+/src/services/NSE.Cliente.Api/obj
+/src/services/NSE.Identidade.Api/bin/Debug/netcoreapp3.1
+/src/services/NSE.Identidade.Api/obj
+/src/services/NSE.Pagamento.Api/bin/Debug/netcoreapp3.1
+/src/services/NSE.Pagamento.Api/obj
+/src/services/NSE.Pedido.Api/bin/Debug/netcoreapp3.1
+/src/services/NSE.Pedido.Api/obj
+/src/web/NSE.WebApp.MVC/bin/Debug/netcoreapp3.1
+/src/web/NSE.WebApp.MVC/obj
