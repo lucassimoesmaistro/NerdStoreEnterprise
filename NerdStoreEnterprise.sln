@@ -13,15 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{A56AF6DC-00C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identidade", "Identidade", "{5AE6DBD7-BB12-4EB0-834A-9E7CBB30A018}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSE.Identidade.Api", "src\services\NSE.Identidade.Api\NSE.Identidade.Api.csproj", "{C41BE12B-0434-43F8-A112-06EFFA42E0B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.Identidade.Api", "src\services\NSE.Identidade.Api\NSE.Identidade.Api.csproj", "{C41BE12B-0434-43F8-A112-06EFFA42E0B2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC", "MVC", "{57BF9CED-5758-4098-A045-53E9334640FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSE.WebApp.MVC", "src\web\NSE.WebApp.MVC\NSE.WebApp.MVC.csproj", "{B02B29ED-1DEE-400F-A328-07468A6B8BEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.WebApp.MVC", "src\web\NSE.WebApp.MVC\NSE.WebApp.MVC.csproj", "{B02B29ED-1DEE-400F-A328-07468A6B8BEE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{3C311677-174A-4A4F-8EE1-17254DE4550F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSE.Core", "src\building-blocks\NSE.Core\NSE.Core.csproj", "{3A36EC15-FAF1-47B7-9B7F-107B5CBA1377}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.Core", "src\building-blocks\NSE.Core\NSE.Core.csproj", "{3A36EC15-FAF1-47B7-9B7F-107B5CBA1377}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Carrinho", "Carrinho", "{02DBE960-8124-49A7-85BB-B16B5ECE7EEC}"
 EndProject
@@ -33,15 +33,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pagamento", "Pagamento", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pedido", "Pedido", "{1C5DEB55-A0E2-4F26-BDA9-18718FD6870B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSE.Carrinho.Api", "src\services\NSE.Carrinho.Api\NSE.Carrinho.Api.csproj", "{3617244B-6EDB-4954-BD2C-99739B0715BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.Carrinho.Api", "src\services\NSE.Carrinho.Api\NSE.Carrinho.Api.csproj", "{3617244B-6EDB-4954-BD2C-99739B0715BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSE.Catalogo.Api", "src\services\NSE.Catalogo.Api\NSE.Catalogo.Api.csproj", "{42772BA3-4F36-438A-89D3-6279EA025143}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.Catalogo.Api", "src\services\NSE.Catalogo.Api\NSE.Catalogo.Api.csproj", "{42772BA3-4F36-438A-89D3-6279EA025143}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSE.Cliente.Api", "src\services\NSE.Cliente.Api\NSE.Cliente.Api.csproj", "{32B5B81B-4F28-4332-9226-9E7F68C92499}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.Cliente.Api", "src\services\NSE.Cliente.Api\NSE.Cliente.Api.csproj", "{32B5B81B-4F28-4332-9226-9E7F68C92499}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSE.Pagamento.Api", "src\services\NSE.Pagamento.Api\NSE.Pagamento.Api.csproj", "{6A5A6BE7-FC42-443C-880E-29A2E34A56FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.Pagamento.Api", "src\services\NSE.Pagamento.Api\NSE.Pagamento.Api.csproj", "{6A5A6BE7-FC42-443C-880E-29A2E34A56FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSE.Pedido.Api", "src\services\NSE.Pedido.Api\NSE.Pedido.Api.csproj", "{6BC20EAC-4217-40D1-8DEB-B1C7E3FDD10B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.Pedido.Api", "src\services\NSE.Pedido.Api\NSE.Pedido.Api.csproj", "{6BC20EAC-4217-40D1-8DEB-B1C7E3FDD10B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A06DC0F3-CD05-4266-B1B6-0BCE8C284947}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSE.WebAPI.Core", "src\building-blocks\NSE.WebAPI.Core\NSE.WebAPI.Core.csproj", "{B6837889-2B55-498E-BA5D-D0B15B5F4D5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +85,10 @@ Global
 		{6BC20EAC-4217-40D1-8DEB-B1C7E3FDD10B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BC20EAC-4217-40D1-8DEB-B1C7E3FDD10B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BC20EAC-4217-40D1-8DEB-B1C7E3FDD10B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6837889-2B55-498E-BA5D-D0B15B5F4D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6837889-2B55-498E-BA5D-D0B15B5F4D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6837889-2B55-498E-BA5D-D0B15B5F4D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6837889-2B55-498E-BA5D-D0B15B5F4D5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,6 +113,8 @@ Global
 		{32B5B81B-4F28-4332-9226-9E7F68C92499} = {5D6C96AB-8EB8-4EEA-AB1A-59B31E79E3BC}
 		{6A5A6BE7-FC42-443C-880E-29A2E34A56FB} = {2A7B6BD5-F342-4FF0-9E77-4D7CFE14464B}
 		{6BC20EAC-4217-40D1-8DEB-B1C7E3FDD10B} = {1C5DEB55-A0E2-4F26-BDA9-18718FD6870B}
+		{A06DC0F3-CD05-4266-B1B6-0BCE8C284947} = {3065AA38-565C-472E-A069-B4A225A790C1}
+		{B6837889-2B55-498E-BA5D-D0B15B5F4D5C} = {A06DC0F3-CD05-4266-B1B6-0BCE8C284947}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {84470963-7F22-43A9-969C-66ED7D8A98F5}
