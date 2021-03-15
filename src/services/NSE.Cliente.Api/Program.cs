@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace NSE.Cliente.Api
+namespace NSE.Clientes.Api
 {
     public class Program
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace NSE.Cliente.Api
+namespace NSE.Clientes.Api
 {
     public class WeatherForecast
     {

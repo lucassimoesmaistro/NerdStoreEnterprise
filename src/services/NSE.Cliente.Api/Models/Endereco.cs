@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NSE.Cliente.Api.Models
+namespace NSE.Clientes.Api.Models
 {
     public class Endereco : Entity
     {

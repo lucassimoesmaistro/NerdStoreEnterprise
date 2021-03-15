@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using NSE.Clientes.Api.Models;
+using NSE.Core.Data;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
-namespace NSE.Cliente.Api.Data.Repository
+namespace NSE.Clientes.Api.Data.Repository
 {
     public class ClienteRepository : IClienteRepository
     {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using NSE.Cliente.Api.Models;
+using NSE.Clientes.Api.Models;
 using NSE.Core.DomainObjects;
 
-namespace NSE.Cliente.Api.Data.Mappings
+namespace NSE.Clientes.Api.Data.Mappings
 {
     public class ClienteMapping : IEntityTypeConfiguration<Cliente>
     {

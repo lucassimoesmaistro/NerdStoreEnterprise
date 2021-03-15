@@ -37,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.Carrinho.Api", "src\ser
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.Catalogo.Api", "src\services\NSE.Catalogo.Api\NSE.Catalogo.Api.csproj", "{42772BA3-4F36-438A-89D3-6279EA025143}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.Cliente.Api", "src\services\NSE.Cliente.Api\NSE.Cliente.Api.csproj", "{32B5B81B-4F28-4332-9226-9E7F68C92499}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.Clientes.Api", "src\services\NSE.Cliente.Api\NSE.Clientes.Api.csproj", "{32B5B81B-4F28-4332-9226-9E7F68C92499}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.Pagamento.Api", "src\services\NSE.Pagamento.Api\NSE.Pagamento.Api.csproj", "{6A5A6BE7-FC42-443C-880E-29A2E34A56FB}"
 EndProject
@@ -45,7 +45,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.Pedido.Api", "src\servi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A06DC0F3-CD05-4266-B1B6-0BCE8C284947}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSE.WebAPI.Core", "src\building-blocks\NSE.WebAPI.Core\NSE.WebAPI.Core.csproj", "{B6837889-2B55-498E-BA5D-D0B15B5F4D5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.WebAPI.Core", "src\building-blocks\NSE.WebAPI.Core\NSE.WebAPI.Core.csproj", "{B6837889-2B55-498E-BA5D-D0B15B5F4D5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

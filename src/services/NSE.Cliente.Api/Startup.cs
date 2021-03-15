@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace NSE.Cliente.Api
+namespace NSE.Clientes.Api
 {
     public class Startup
     {
