@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using FluentValidation.Results;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace NSE.Identidade.Api.Controllers
+namespace NSE.WebAPI.Core.Controllers
 {
     [ApiController]
     public abstract class MainController : Controller
@@ -23,6 +23,7 @@ namespace NSE.Identidade.Api.Controllers
                 { "Mensagens", Erros.ToArray() }
             }));
         }
+
         protected ActionResult CustomResponse(ModelStateDictionary modelState)
         {
             var erros = modelState.Values.SelectMany(e => e.Errors);
@@ -34,10 +35,21 @@ namespace NSE.Identidade.Api.Controllers
             return CustomResponse();
         }
 
+        protected ActionResult CustomResponse(ValidationResult validationResult)
+        {
+            foreach (var erro in validationResult.Errors)
+            {
+                AdicionarErroProcessamento(erro.ErrorMessage);
+            }
+
+            return CustomResponse();
+        }
+
         protected bool OperacaoValida()
         {
             return !Erros.Any();
         }
+
         protected void AdicionarErroProcessamento(string erro)
         {
             Erros.Add(erro);
