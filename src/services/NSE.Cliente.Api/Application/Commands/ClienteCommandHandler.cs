@@ -4,8 +4,9 @@ using System.Threading.Tasks;
 using NSE.Clientes.Api.Models;
 using NSE.Core.Messages;
 using MediatR;
+using NSE.Clientes.Api.Application.Events;
 
-namespace NSE.Clientes.Api.Application
+namespace NSE.Clientes.Api.Application.Commands
 {
     public class ClienteCommandHandler : CommandHandler,
         IRequestHandler<RegistrarClienteCommand, ValidationResult>
@@ -31,10 +32,10 @@ namespace NSE.Clientes.Api.Application
                 AdicionarErro("Este CPF já está em uso.");
                 return ValidationResult;
             }
-            
+
             _clienteRepository.Adicionar(cliente);
 
-            //cliente.AdicionarEvento(new ClienteRegistradoEvent(message.Id, message.Nome, message.Email, message.Cpf));
+            cliente.AdicionarEvento(new ClienteRegistradoEvent(message.Id, message.Nome, message.Email, message.Cpf));
 
             return await PersistirDados(_clienteRepository.UnitOfWork);
         }

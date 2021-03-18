@@ -2,7 +2,7 @@
 using NSE.Core.Messages;
 using System;
 
-namespace NSE.Clientes.Api.Application
+namespace NSE.Clientes.Api.Application.Commands
 {
     public class RegistrarClienteCommand : Command
     {
