@@ -31,12 +31,12 @@ namespace NSE.Clientes.Api.Application
                 AdicionarErro("Este CPF já está em uso.");
                 return ValidationResult;
             }
-            return message.ValidationResult;
-            //_clienteRepository.Adicionar(cliente);
+            
+            _clienteRepository.Adicionar(cliente);
 
             //cliente.AdicionarEvento(new ClienteRegistradoEvent(message.Id, message.Nome, message.Email, message.Cpf));
 
-            //return await PersistirDados(_clienteRepository.UnitOfWork);
+            return await PersistirDados(_clienteRepository.UnitOfWork);
         }
     }
 }
