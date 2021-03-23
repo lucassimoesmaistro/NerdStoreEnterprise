@@ -17,11 +17,9 @@ namespace NSE.Clientes.Api.Services
         private readonly IServiceProvider _serviceProvider;
 
         public RegistroClienteIntegrationHandler(
-                            IServiceProvider serviceProvider,
-                            IBus bus)
+                            IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
-            _bus = bus;
         }
 
         //private void SetResponder()
@@ -34,6 +32,7 @@ namespace NSE.Clientes.Api.Services
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
+            _bus = RabbitHutch.CreateBus("host=localhost:5672");
             _bus.RespondAsync<UsuarioRegistradoIntegrationEvent, ResponseMessage>(async request =>
                 await RegistrarCliente(request));
 
