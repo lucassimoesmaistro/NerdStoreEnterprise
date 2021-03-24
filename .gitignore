@@ -21,3 +21,5 @@
 /src/web/NSE.WebApp.MVC/obj
 /src/building-blocks/NSE.WebAPI.Core/bin/Debug/netcoreapp3.1
 /src/building-blocks/NSE.WebAPI.Core/obj
+/src/building-blocks/NSE.MessageBus/bin/Debug/netcoreapp3.1
+/src/building-blocks/NSE.MessageBus/obj
