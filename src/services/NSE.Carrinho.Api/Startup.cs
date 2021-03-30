@@ -36,7 +36,7 @@ namespace NSE.Carrinho.Api
 
             services.AddSwaggerConfiguration();
 
-            //services.RegisterServices();
+            services.RegisterServices();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
