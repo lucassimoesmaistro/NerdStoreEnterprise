@@ -1,5 +1,6 @@
 select * FROM [NerdStoreEnterpriseDB].[dbo].[Clientes]
-select * FROM [dbo].[AspNetUsers]
+select * FROM [NerdStoreEnterpriseDB].[dbo].[AspNetUsers]
+select * FROM [NerdStoreEnterpriseDB].[dbo].[AspNetUserClaims]
 
 --Teste@123
 --14103562137
