@@ -23,3 +23,5 @@
 /src/building-blocks/NSE.WebAPI.Core/obj
 /src/building-blocks/NSE.MessageBus/bin/Debug/netcoreapp3.1
 /src/building-blocks/NSE.MessageBus/obj
+/src/api gateways/NSE.Bff.Compras/bin/Debug/netcoreapp3.1
+/src/api gateways/NSE.Bff.Compras/obj
