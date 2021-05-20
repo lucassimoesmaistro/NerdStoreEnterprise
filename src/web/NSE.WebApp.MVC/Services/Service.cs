@@ -3,7 +3,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using NSE.WebApp.MVC.Extensions;
-using NSE.WebApp.MVC.Models;
+using NSE.Core.Communication;
 
 
 namespace NSE.WebApp.MVC.Services

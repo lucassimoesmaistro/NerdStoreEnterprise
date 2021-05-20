@@ -3,6 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
 using NSE.WebApp.MVC.Extensions;
+using NSE.Core.Communication;
 using NSE.WebApp.MVC.Models;
 
 namespace NSE.WebApp.MVC.Services
