@@ -46,8 +46,9 @@ namespace NSE.WebApp.MVC.Configuration
             #endregion
         }
     }
+    #region PollyExtension
 
-    public class PollyExtensions
+    public static class PollyExtensions
     {
         public static AsyncRetryPolicy<HttpResponseMessage> EsperarTentar()
         {
@@ -68,4 +69,6 @@ namespace NSE.WebApp.MVC.Configuration
             return retry;
         }
     }
+
+    #endregion
 }
