@@ -24,8 +24,8 @@ namespace NSE.WebApp.MVC.Services
             {
                 PropertyNameCaseInsensitive = true
             };
-
-            return JsonSerializer.Deserialize<T>(await responseMessage.Content.ReadAsStringAsync(), options);
+            var x = await responseMessage.Content.ReadAsStringAsync();
+            return JsonSerializer.Deserialize<T>(x, options);
         }
 
         protected bool TratarErrosResponse(HttpResponseMessage response)
