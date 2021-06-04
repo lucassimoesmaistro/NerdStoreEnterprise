@@ -1,22 +1,24 @@
-﻿using FluentValidation.Results;
-using Microsoft.EntityFrameworkCore;
-using NSE.Core.Data;
-using NSE.Core.Messages;
-using NSE.Pedidos.Domain;
-using System;
+﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentValidation.Results;
+using Microsoft.EntityFrameworkCore;
+using NSE.Core.Data;
+using NSE.Core.DomainObjects;
+using NSE.Core.Mediator;
+using NSE.Core.Messages;
+using NSE.Pedidos.Domain;
 
 namespace NSE.Pedidos.Infra.Data
 {
     public class PedidosContext : DbContext, IUnitOfWork
     {
-        //private readonly IMediatorHandler _mediatorHandler;
+        private readonly IMediatorHandler _mediatorHandler;
 
-        public PedidosContext(DbContextOptions<PedidosContext> options)//, IMediatorHandler mediatorHandler)
+        public PedidosContext(DbContextOptions<PedidosContext> options, IMediatorHandler mediatorHandler)
             : base(options)
         {
-            //_mediatorHandler = mediatorHandler;
+            _mediatorHandler = mediatorHandler;
         }
 
 
@@ -38,9 +40,9 @@ namespace NSE.Pedidos.Infra.Data
             //foreach (var relationship in modelBuilder.Model.GetEntityTypes()
             //    .SelectMany(e => e.GetForeignKeys())) relationship.DeleteBehavior = DeleteBehavior.ClientSetNull;
 
-            modelBuilder.HasSequence<int>("MinhaSequencia").StartsAt(1000).IncrementsBy(1);
+            //modelBuilder.HasSequence<int>("MinhaSequencia").StartsAt(1000).IncrementsBy(1);
 
-            base.OnModelCreating(modelBuilder);
+            //base.OnModelCreating(modelBuilder);
         }
 
         public async Task<bool> Commit()
@@ -60,33 +62,33 @@ namespace NSE.Pedidos.Infra.Data
             }
 
             var sucesso = await base.SaveChangesAsync() > 0;
-            //if (sucesso) await _mediatorHandler.PublicarEventos(this);
+            if (sucesso) await _mediatorHandler.PublicarEventos(this);
 
             return sucesso;
         }
     }
 
-    //public static class MediatorExtension
-    //{
-    //    public static async Task PublicarEventos<T>(this IMediatorHandler mediator, T ctx) where T : DbContext
-    //    {
-    //        var domainEntities = ctx.ChangeTracker
-    //            .Entries<Entity>()
-    //            .Where(x => x.Entity.Notificacoes != null && x.Entity.Notificacoes.Any());
+    public static class MediatorExtension
+    {
+        public static async Task PublicarEventos<T>(this IMediatorHandler mediator, T ctx) where T : DbContext
+        {
+            var domainEntities = ctx.ChangeTracker
+                .Entries<Entity>()
+                .Where(x => x.Entity.Notificacoes != null && x.Entity.Notificacoes.Any());
 
-    //        var domainEvents = domainEntities
-    //            .SelectMany(x => x.Entity.Notificacoes)
-    //            .ToList();
+            var domainEvents = domainEntities
+                .SelectMany(x => x.Entity.Notificacoes)
+                .ToList();
 
-    //        domainEntities.ToList()
-    //            .ForEach(entity => entity.Entity.LimparEventos());
+            domainEntities.ToList()
+                .ForEach(entity => entity.Entity.LimparEventos());
 
-    //        var tasks = domainEvents
-    //            .Select(async (domainEvent) => {
-    //                await mediator.PublicarEvento(domainEvent);
-    //            });
+            var tasks = domainEvents
+                .Select(async (domainEvent) => {
+                    await mediator.PublicarEvento(domainEvent);
+                });
 
-    //        await Task.WhenAll(tasks);
-    //    }
-    //}
+            await Task.WhenAll(tasks);
+        }
+    }
 }
