@@ -7,7 +7,7 @@ using NSE.Core.Data;
 using NSE.Core.DomainObjects;
 using NSE.Core.Mediator;
 using NSE.Core.Messages;
-using NSE.Pedidos.Domain;
+using NSE.Pedidos.Domain.Vouchers;
 
 namespace NSE.Pedidos.Infra.Data
 {

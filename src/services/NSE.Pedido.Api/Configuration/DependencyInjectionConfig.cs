@@ -1,9 +1,7 @@
-﻿using FluentValidation.Results;
-using MediatR;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using NSE.Core.Mediator;
-using NSE.Pedidos.Domain;
+using NSE.Pedidos.Domain.Vouchers;
 using NSE.Pedidos.Infra.Data;
 using NSE.Pedidos.Infra.Data.Repository;
 using NSE.WebAPI.Core.Usuario;
