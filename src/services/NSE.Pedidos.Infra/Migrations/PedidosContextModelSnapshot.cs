@@ -19,7 +19,7 @@ namespace NSE.Pedidos.Infra.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("NSE.Pedidos.Domain.Voucher", b =>
+            modelBuilder.Entity("NSE.Pedidos.Domain.Vouchers.Voucher", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -45,6 +45,9 @@ namespace NSE.Pedidos.Infra.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("Quantidade")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TipoDesconto")
                         .HasColumnType("int");
 
                     b.Property<bool>("Utilizado")
