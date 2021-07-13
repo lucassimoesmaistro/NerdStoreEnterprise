@@ -4,9 +4,11 @@ using System.Threading.Tasks;
 using FluentValidation.Results;
 using MediatR;
 using NSE.Core.Messages;
+using NSE.Pedidos.Api.Application.Events;
 using NSE.Pedidos.API.Application.DTO;
 using NSE.Pedidos.Domain.Pedidos;
 using NSE.Pedidos.Domain.Vouchers;
+using NSE.Pedidos.Domain.Vouchers.Specs;
 
 namespace NSE.Pedidos.API.Application.Commands
 {
@@ -44,7 +46,7 @@ namespace NSE.Pedidos.API.Application.Commands
             pedido.AutorizarPedido();
 
             // Adicionar Evento
-            //pedido.AdicionarEvento(new PedidoRealizadoEvent(pedido.Id, pedido.ClienteId));
+            pedido.AdicionarEvento(new PedidoRealizadoEvent(pedido.Id, pedido.ClienteId));
 
             // Adicionar Pedido Repositorio
             _pedidoRepository.Adicionar(pedido);
@@ -84,12 +86,12 @@ namespace NSE.Pedidos.API.Application.Commands
                 return false;
             }
 
-            //var voucherValidation = new VoucherValidation().Validate(voucher);
-            //if (!voucherValidation.IsValid)
-            //{
-            //    voucherValidation.Errors.ToList().ForEach(m => AdicionarErro(m.ErrorMessage));
-            //    return false;
-            //}
+            var voucherValidation = new VoucherValidation().Validate(voucher);
+            if (!voucherValidation.IsValid)
+            {
+                voucherValidation.Errors.ToList().ForEach(m => AdicionarErro(m.ErrorMessage));
+                return false;
+            }
 
             pedido.AtribuirVoucher(voucher);
             voucher.DebitarQuantidade();
