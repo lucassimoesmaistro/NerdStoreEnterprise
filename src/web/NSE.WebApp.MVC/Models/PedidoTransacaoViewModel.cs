@@ -1,8 +1,7 @@
-﻿using NSE.Core.Validation;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-//using NSE.Core.Validation;
+using NSE.Core.Validation;
 
 namespace NSE.WebApp.MVC.Models
 {

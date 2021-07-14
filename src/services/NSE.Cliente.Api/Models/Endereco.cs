@@ -1,8 +1,5 @@
 ﻿using NSE.Core.DomainObjects;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace NSE.Clientes.Api.Models
 {
@@ -20,7 +17,7 @@ namespace NSE.Clientes.Api.Models
         // EF Relation
         public Cliente Cliente { get; protected set; }
 
-        public Endereco(string logradouro, string numero, string complemento, string bairro, string cep, string cidade, string estado)
+        public Endereco(string logradouro, string numero, string complemento, string bairro, string cep, string cidade, string estado, Guid clienteId)
         {
             Logradouro = logradouro;
             Numero = numero;
@@ -29,6 +26,10 @@ namespace NSE.Clientes.Api.Models
             Cep = cep;
             Cidade = cidade;
             Estado = estado;
+            ClienteId = clienteId;
         }
+
+        // EF Constructor
+        protected Endereco() { }
     }
 }
