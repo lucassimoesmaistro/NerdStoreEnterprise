@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -32,7 +33,6 @@ namespace NSE.Bff.Compras.Controllers
         {
             return CustomResponse(await _carrinhoService.ObterCarrinho());
         }
-
 
         [HttpGet]
         [Route("compras/carrinho-quantidade")]
