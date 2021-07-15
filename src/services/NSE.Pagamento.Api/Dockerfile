@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["src/services/NSE.Pagamento.Api/NSE.Pagamento.Api.csproj", "src/services/NSE.Pagamento.Api/"]
-RUN dotnet restore "src/services/NSE.Pagamento.Api/NSE.Pagamento.Api.csproj"
+COPY ["src/services/NSE.Pagamentos.API/NSE.Pagamentos.API.csproj", "src/services/NSE.Pagamentos.API/"]
+RUN dotnet restore "src/services/NSE.Pagamentos.API/NSE.Pagamentos.API.csproj"
 COPY . .
-WORKDIR "/src/src/services/NSE.Pagamento.Api"
-RUN dotnet build "NSE.Pagamento.Api.csproj" -c Release -o /app/build
+WORKDIR "/src/src/services/NSE.Pagamentos.API"
+RUN dotnet build "NSE.Pagamentos.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "NSE.Pagamento.Api.csproj" -c Release -o /app/publish
+RUN dotnet publish "NSE.Pagamentos.API.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "NSE.Pagamento.Api.dll"]
+ENTRYPOINT ["dotnet", "NSE.Pagamentos.API.dll"]
