@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NSE.Clientes.Api.Data;
-
+using NSE.WebAPI.Core.Identidade;
 
 namespace NSE.Clientes.Api.Configuration
 {
@@ -42,7 +42,7 @@ namespace NSE.Clientes.Api.Configuration
 
             app.UseCors("Total");
 
-            //app.UseAuthConfiguration();
+            app.UseAuthConfiguration();
 
             app.UseEndpoints(endpoints =>
             {
