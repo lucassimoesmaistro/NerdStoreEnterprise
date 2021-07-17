@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NSE.Catalogo.Api.Configuration;
 using NSE.Catalogo.API.Configuration;
 using NSE.WebAPI.Core.Identidade;
 
@@ -31,6 +32,8 @@ namespace NSE.Catalogo.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddApiConfiguration(Configuration);
+
+            services.AddMessageBusConfiguration(Configuration);
 
             services.AddJwtConfiguration(Configuration);
 
