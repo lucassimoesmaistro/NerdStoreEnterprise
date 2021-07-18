@@ -2,9 +2,9 @@
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using NSE.WebApp.MVC.Extensions;
 using NSE.Core.Communication;
-
+using NSE.WebApp.MVC.Extensions;
+using NSE.WebApp.MVC.Models;
 
 namespace NSE.WebApp.MVC.Services
 {
@@ -24,8 +24,8 @@ namespace NSE.WebApp.MVC.Services
             {
                 PropertyNameCaseInsensitive = true
             };
-            var x = await responseMessage.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<T>(x, options);
+
+            return JsonSerializer.Deserialize<T>(await responseMessage.Content.ReadAsStringAsync(), options);
         }
 
         protected bool TratarErrosResponse(HttpResponseMessage response)

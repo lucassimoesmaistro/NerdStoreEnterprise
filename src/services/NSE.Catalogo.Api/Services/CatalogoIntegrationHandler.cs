@@ -53,7 +53,7 @@ namespace NSE.Catalogo.Api.Services
                 foreach (var produto in produtos)
                 {
                     var quantidadeProduto = message.Itens.FirstOrDefault(p => p.Key == produto.Id).Value;
-
+                    
                     if (produto.EstaDisponivel(quantidadeProduto))
                     {
                         produto.RetirarEstoque(quantidadeProduto);

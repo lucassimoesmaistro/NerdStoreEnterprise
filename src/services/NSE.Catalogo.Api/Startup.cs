@@ -4,10 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NSE.Catalogo.Api.Configuration;
-using NSE.Catalogo.API.Configuration;
 using NSE.WebAPI.Core.Identidade;
 
-namespace NSE.Catalogo.Api
+namespace NSE.Catalogo.API
 {
     public class Startup
     {

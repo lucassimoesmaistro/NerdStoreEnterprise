@@ -8,6 +8,4 @@ namespace NSE.WebApp.MVC.Models
         public string Titulo { get; set; }
         public string Mensagem { get; set; }
     }
-
-   
 }

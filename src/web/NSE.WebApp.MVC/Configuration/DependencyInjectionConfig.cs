@@ -4,13 +4,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.DataAnnotations;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NSE.WebApp.MVC.Extensions;
 using NSE.WebApp.MVC.Services;
 using NSE.WebApp.MVC.Services.Handlers;
 using NSE.WebAPI.Core.Usuario;
 using Polly;
 using Polly.Extensions.Http;
 using Polly.Retry;
-using static NSE.WebApp.MVC.Extensions.CpfAnnotation;
 
 namespace NSE.WebApp.MVC.Configuration
 {

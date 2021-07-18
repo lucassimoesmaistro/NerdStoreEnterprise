@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-
 namespace NSE.WebApp.MVC.Models
 {
     public class EnderecoViewModel
