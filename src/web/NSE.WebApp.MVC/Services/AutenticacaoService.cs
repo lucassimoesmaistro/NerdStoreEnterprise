@@ -35,9 +35,9 @@ namespace NSE.WebApp.MVC.Services
         private readonly IAspNetUser _user;
         private readonly IAuthenticationService _authenticationService;
 
-        public AutenticacaoService(HttpClient httpClient, 
-                                   IOptions<AppSettings> settings, 
-                                   IAspNetUser user, 
+        public AutenticacaoService(HttpClient httpClient,
+                                   IOptions<AppSettings> settings,
+                                   IAspNetUser user,
                                    IAuthenticationService authenticationService)
         {
             httpClient.BaseAddress = new Uri(settings.Value.AutenticacaoUrl);
