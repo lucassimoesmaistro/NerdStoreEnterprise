@@ -24,4 +24,8 @@
   </ItemGroup>
 
 
+  <ItemGroup>
+    <Protobuf Include="Protos\carrinho.proto" GrpcServices="Server" />
+  </ItemGroup>
+
 </Project>
